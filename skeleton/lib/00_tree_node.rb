@@ -20,7 +20,23 @@ class PolyTreeNode
         @parent = node
     end
 
-    
+    def add_child(child_node)
+        child_node.parent = self
+    end
 
+    def remove_child(child_node)
+        if child_node == nil || child_node.parent == nil
+            raise "node has no parent."
+        else
+            child_node.parent = nil
+        end
+    end
 
+    def dfs(target_value)
+
+    end
+
+    def bfs(target_value)
+
+    end
 end
